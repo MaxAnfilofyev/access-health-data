@@ -8,7 +8,7 @@ Styling:          Tailwind CSS 4.0 + shadcn/ui component library
 Typography:       Google Fonts (Inter, Geist Mono)
 Icons:            Lucide React
 State/Data:       Upstash Redis (KV storage)
-Deployment:       Vercel (with wildcard subdomain support)
+Deployment:       Cloudflare Pages (with wildcard subdomain support)
 ```
 
 **Dependencies Breakdown:**
@@ -54,10 +54,10 @@ Deployment:       Vercel (with wildcard subdomain support)
    - pnpm package manager preferred
 
 2. **Deployment Constraints:**
-   - Vercel as hosting platform
+   - Cloudflare Pages as hosting platform
    - Wildcard DNS configuration for subdomains (`*.accesshealthdata.com`)
    - Static generation compatible
-   - Environment variables must be configured in Vercel dashboard
+   - Environment variables must be configured in Cloudflare dashboard
 
 3. **Performance Limits:**
    - Redis: Upstash free tier (10,000 requests/month)

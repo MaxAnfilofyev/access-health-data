@@ -9,7 +9,7 @@
 - ✅ TypeScript strict mode enabled
 - ✅ Multi-tenant subdomain routing via middleware.ts
 - ✅ Redis (Upstash) configured for tenant data storage
-- ✅ Vercel deployment pipeline ready
+- ✅ Cloudflare Pages deployment pipeline ready
 - ✅ Google Fonts (Inter, Geist Mono) integrated
 - ✅ Google Analytics G-P20W9BTLE2 implemented and working
 
@@ -25,7 +25,6 @@
 **Subdomain Routing:**
 - ✅ Local development: `tenant.localhost:3000` → `/s/tenant`
 - ✅ Production compatibility: `tenant.domain.com` routing
-- ✅ Vercel preview URL support: `tenant---branch.vercel.app`
 
 ## Current Issues 🐛
 

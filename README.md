@@ -11,7 +11,6 @@ A production-ready example of a multi-tenant application built with Next.js 15, 
 - ✅ Admin interface for managing tenants
 - ✅ Emoji support for tenant branding
 - ✅ Support for local development with subdomains
-- ✅ Compatible with Vercel preview deployments
 
 ## Tech Stack
 
@@ -73,18 +72,18 @@ This application demonstrates a subdomain-based multi-tenant architecture where:
 - The main domain hosts the landing page and admin interface
 - Subdomains are dynamically mapped to tenant-specific content
 
-The middleware (`middleware.ts`) intelligently detects subdomains across various environments (local development, production, and Vercel preview deployments).
+The middleware (`middleware.ts`) intelligently detects subdomains across various environments (local development and production).
 
 ## Deployment
 
-This application is designed to be deployed on Vercel. To deploy:
+This application is designed to be deployed on Cloudflare Pages. To deploy:
 
 1. Push your repository to GitHub
-2. Connect your repository to Vercel
-3. Configure environment variables
+2. Connect your repository to Cloudflare Pages
+3. Configure environment variables in Cloudflare dashboard
 4. Deploy
 
 For custom domains, make sure to:
 
-1. Add your root domain to Vercel
-2. Set up a wildcard DNS record (`*.yourdomain.com`) on Vercel
+1. Add your root domain to Cloudflare Pages
+2. Set up a wildcard DNS record (`*.yourdomain.com`) on Cloudflare

@@ -26,7 +26,7 @@
 
 2. **Middleware Implementation:**
    - Custom `middleware.ts` for request routing (currently deprecated)
-   - Pattern matching for localhost subdomains, Vercel preview URLs, and production subdomains
+   - Pattern matching for localhost subdomains and production subdomains
    - Redirects root paths on subdomains to `/s/[subdomain]` dynamic routes
 
 3. **State Management:**

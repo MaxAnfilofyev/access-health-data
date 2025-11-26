@@ -25,7 +25,7 @@
 - Next.js 15+ with App Router
 - TypeScript for type safety
 - Tailwind CSS for styling
-- Vercel deployment with wildcard subdomain support
+- Cloudflare Pages deployment with wildcard subdomain support
 - Google Analytics integration for tracking
 
 **Current Status:** Initial build failing due to missing dependency (@next/third-parties/google)
