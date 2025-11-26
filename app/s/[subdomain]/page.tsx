@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { getSubdomainData } from '@/lib/subdomains';
 import { protocol, rootDomain } from '@/lib/utils';
 
+export const runtime = 'edge';
+
 export async function generateMetadata({
   params
 }: {
