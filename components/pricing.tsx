@@ -79,7 +79,7 @@ const tiers = [
       "Dedicated support",
       "Custom BAA",
     ],
-    cta: "Contact Sales",
+    cta: "Get Access",
     highlight: false,
   },
 ]
@@ -133,7 +133,7 @@ export function Pricing() {
                 ))}
               </ul>
 
-              {tier.cta === "Contact Sales" ? (
+              {tier.cta === "Get Access" ? (
                 <Link href="/enterprise">
                   <Button
                     className={

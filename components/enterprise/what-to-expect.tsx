@@ -1,30 +1,42 @@
-import { Mail, FileText, Shield, Settings, Lock } from "lucide-react"
+import { 
+  MessageSquareCode, 
+  Calculator, 
+  FileSignature, 
+  ShieldCheck, 
+  Crown, 
+  Server 
+} from "lucide-react"
 
 const expectations = [
   {
-    icon: Mail,
-    title: "A direct email from engineering (not sales)",
+    icon: MessageSquareCode, // Represents "Engineering/Dev" communication
+    title: "A direct response from engineering (not sales)",
     description: "Our technical team will reach out to discuss your requirements.",
   },
   {
-    icon: FileText,
-    title: "A usage-based quote based on your GB requirements",
-    description: "Transparent pricing tailored to your expected volume.",
+    icon: Calculator, // Represents "Pricing/Volume Math"
+    title: "A usage-based quote tailored to your patient volume and document load",
+    description: "Transparent pricing based on your specific business scale.",
   },
   {
-    icon: Shield,
-    title: "A BAA (if PHI is involved)",
+    icon: FileSignature, // Represents "Signed Legal Agreement" (BAA)
+    title: "BAA (if required)",
     description: "We'll prepare and execute a Business Associate Agreement.",
   },
   {
-    icon: Settings,
-    title: "Instructions for enabling Enterprise Mode in the dashboard",
+    icon: ShieldCheck, // Represents "Compliance/Security Standards"
+    title: "Optional security package (SOC2/HITRUST roadmap, architecture, policies)",
+    description: "Comprehensive compliance documentation for your review.",
+  },
+  {
+    icon: Crown, // Represents "Enterprise Tier/Premium Features"
+    title: "Instructions for enabling Enterprise Mode in your dashboard",
     description: "Quick setup to unlock enterprise features.",
   },
   {
-    icon: Lock,
-    title: "Optional security package",
-    description: "SOC2/HITRUST roadmap and compliance documentation.",
+    icon: Server, // Represents "Infrastructure/Clusters"
+    title: "Options for private cluster or VPC peering",
+    description: "Secure infrastructure options based on your needs.",
   },
 ]
 

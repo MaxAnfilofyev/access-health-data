@@ -45,7 +45,7 @@ const tiers = [
     period: "/month base",
     description: "Custom included volumes",
     features: ["Overage: $0.10/GB processing, $0.05/GB storage", "Private clusters + dedicated infra", "BAA included"],
-    cta: "Contact Enterprise Support",
+    cta: "Get Access",
     highlighted: false,
   },
 ]
@@ -85,7 +85,7 @@ export function PricingTiers() {
                   </li>
                 ))}
               </ul>
-              {tier.cta === "Contact Enterprise Support" ? (
+              {tier.cta === "Get Access" ? (
                 <Link href="/enterprise">
                   <Button
                     className={`w-full ${

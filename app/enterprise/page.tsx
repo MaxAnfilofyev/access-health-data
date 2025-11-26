@@ -32,12 +32,10 @@ export default function EnterprisePage() {
           <div className="mx-auto max-w-3xl">
             <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
               <p className="text-muted-foreground leading-relaxed">
-                AccessHealthData Enterprise is for organizations managing large patient populations or requiring
-                enhanced delivery guarantees, private clusters, or custom compliance configurations.
+                AccessHealthData Enterprise provides enhanced performance, dedicated infrastructure options, deeper usage discounts, and compliance tools for large-scale clinical data workloads.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                We keep the process simple—no long sales cycles, no opaque pricing. Tell us a bit about your use case
-                and volume, and we'll enable Enterprise Mode quickly.
+                We keep the process simple—no enterprise sales cycle, no opaque pricing. Tell us about your use case so we can enable Enterprise Mode quickly.
               </p>
             </div>
           </div>
