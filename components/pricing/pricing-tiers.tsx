@@ -86,15 +86,17 @@ export function PricingTiers() {
                 ))}
               </ul>
               {tier.cta === "Contact Enterprise Support" ? (
-                <Button
-                  className={`w-full ${
-                    tier.highlighted
-                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  }`}
-                >
-                  {tier.cta}
-                </Button>
+                <Link href="/enterprise">
+                  <Button
+                    className={`w-full ${
+                      tier.highlighted
+                        ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    }`}
+                  >
+                    {tier.cta}
+                  </Button>
+                </Link>
               ) : (
                 <Link href="/signup">
                   <Button

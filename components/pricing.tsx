@@ -134,16 +134,18 @@ export function Pricing() {
               </ul>
 
               {tier.cta === "Contact Sales" ? (
-                <Button
-                  className={
-                    tier.highlight
-                      ? "w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                      : "w-full border-secondary text-secondary hover:bg-secondary/5"
-                  }
-                  variant={tier.highlight ? "default" : "outline"}
-                >
-                  {tier.cta}
-                </Button>
+                <Link href="/enterprise">
+                  <Button
+                    className={
+                      tier.highlight
+                        ? "w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                        : "w-full border-secondary text-secondary hover:bg-secondary/5"
+                    }
+                    variant={tier.highlight ? "default" : "outline"}
+                  >
+                    {tier.cta}
+                  </Button>
+                </Link>
               ) : (
                 <Link href="/signup">
                   <Button
