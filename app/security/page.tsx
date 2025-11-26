@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 import { Shield, Lock, Eye, FileText, Server, Bell, Building, CheckCircle } from "lucide-react"
 
 export const metadata = {
@@ -338,9 +339,11 @@ export default function SecurityPage() {
             <h2 className="text-2xl font-bold text-primary-foreground md:text-3xl">
               Build with secure, normalized healthcare data you can trust.
             </h2>
-            <Button size="lg" variant="secondary" className="mt-8">
-              Create a Free Developer Account
-            </Button>
+            <Link href="/signup">
+              <Button size="lg" variant="secondary" className="mt-8">
+                Create a Free Developer Account
+              </Button>
+            </Link>
           </div>
         </section>
       </main>

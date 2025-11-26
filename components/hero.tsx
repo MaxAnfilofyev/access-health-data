@@ -23,7 +23,7 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 sm:w-auto">
+          <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 sm:w-auto" onClick={() => router.push('/signup')}>
             Create a Free Developer Account
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

@@ -51,9 +51,11 @@ export function Header() {
           <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
             Sign In
           </Button>
-          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            Create Account
-          </Button>
+          <Link href="/signup">
+            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              Create Account
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

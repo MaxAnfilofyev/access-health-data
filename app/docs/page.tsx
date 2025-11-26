@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 import {
   FileText,
   Code,
@@ -41,9 +42,11 @@ export default function DocsPage() {
               who want to integrate healthcare data without fighting HL7, C-CDA, or TEFCA complexity.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Get Your API Key
-              </Button>
+              <Link href="/signup">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  Get Your API Key
+                </Button>
+              </Link>
               <Button size="lg" variant="outline">
                 View Quickstart
               </Button>
@@ -389,9 +392,11 @@ export default function DocsPage() {
             <h2 className="text-2xl font-bold text-primary-foreground md:text-3xl">
               Start building with normalized healthcare data in minutes.
             </h2>
-            <Button size="lg" variant="secondary" className="mt-8">
-              Get Your API Key
-            </Button>
+            <Link href="/signup">
+              <Button size="lg" variant="secondary" className="mt-8">
+                Get Your API Key
+              </Button>
+            </Link>
           </div>
         </section>
       </main>

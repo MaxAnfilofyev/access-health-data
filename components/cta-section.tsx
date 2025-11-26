@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function CtaSection() {
   return (
@@ -11,10 +12,12 @@ export function CtaSection() {
         <p className="mx-auto mt-4 max-w-xl text-lg text-secondary-foreground/80">
           Get started with our free developer tier and unlimited synthetic data access.
         </p>
-        <Button size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90">
-          Create a Free Developer Account
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+        <Link href="/signup">
+          <Button size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90">
+            Create a Free Developer Account
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function PricingCta() {
   return (
@@ -9,10 +10,12 @@ export function PricingCta() {
           Build with normalized nationwide healthcare data in minutes, not months.
         </h2>
         <div className="mt-8">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            Create a free developer account
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link href="/signup">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              Create a free developer account
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
