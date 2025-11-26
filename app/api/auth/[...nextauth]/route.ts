@@ -5,19 +5,20 @@ import GithubProvider from "next-auth/providers/github"
 // import EmailProvider from "next-auth/providers/email"
 
 export const authOptions = {
+  secret: process.env.NEXTAUTH_SECRET,
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      clientId: process.env.GOOGLE_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
     }),
     // MicrosoftProvider({
     //   clientId: process.env.MICROSOFT_CLIENT_ID!,
     //   clientSecret: process.env.MICROSOFT_CLIENT_SECRET!,
     // }),
     GithubProvider({
-      clientId: process.env.GITHUB_ID!,
-      clientSecret: process.env.GITHUB_SECRET!,
+      clientId: process.env.GITHUB_ID || "",
+      clientSecret: process.env.GITHUB_SECRET || "",
     }),
     // EmailProvider({
     //   server: {
@@ -50,5 +51,7 @@ export const authOptions = {
 }
 
 const handler = NextAuth(authOptions)
+
+// export const runtime = 'edge' // Disabled for NextAuth v4 compatibility
 
 export { handler as GET, handler as POST }
