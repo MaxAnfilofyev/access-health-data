@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
+import Link from "next/link"
 
 const tiers = [
   {
@@ -132,16 +133,31 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Button
-                className={
-                  tier.highlight
-                    ? "w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                    : "w-full border-secondary text-secondary hover:bg-secondary/5"
-                }
-                variant={tier.highlight ? "default" : "outline"}
-              >
-                {tier.cta}
-              </Button>
+              {tier.cta === "Contact Sales" ? (
+                <Button
+                  className={
+                    tier.highlight
+                      ? "w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                      : "w-full border-secondary text-secondary hover:bg-secondary/5"
+                  }
+                  variant={tier.highlight ? "default" : "outline"}
+                >
+                  {tier.cta}
+                </Button>
+              ) : (
+                <Link href="/signup">
+                  <Button
+                    className={
+                      tier.highlight
+                        ? "w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                        : "w-full border-secondary text-secondary hover:bg-secondary/5"
+                    }
+                    variant={tier.highlight ? "default" : "outline"}
+                  >
+                    {tier.cta}
+                  </Button>
+                </Link>
+              )}
             </div>
           ))}
         </div>

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import Script from "next/script"
 // import { GoogleAnalytics } from "@next/third-parties/google";
+import { Providers } from "@/components/providers"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -42,7 +43,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
         {/* <GoogleAnalytics gaId="G-P20W9BTLE2" /> */}
       </body>
     </html>

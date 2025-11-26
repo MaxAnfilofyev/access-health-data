@@ -1,16 +1,16 @@
+'use client'
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
-import { Shield, Lock, Eye, FileText, Server, Bell, Building, CheckCircle } from "lucide-react"
-
-export const metadata = {
-  title: "Security, Privacy, and Compliance | AccessHealthData",
-  description: "Your data is protected by a modern, HIPAA-ready infrastructure built for developers.",
-}
+import { useSession } from "next-auth/react"
+import { Shield, Lock, Eye, FileText, Server, Bell, Building, CheckCircle, User } from "lucide-react"
 
 export default function SecurityPage() {
+  // Use the session hook inside the component
+  const { data: session } = useSession()
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -313,6 +313,57 @@ export default function SecurityPage() {
             <p className="mt-6 text-sm text-muted-foreground">
               We provide guidance and best practices as part of onboarding.
             </p>
+          </div>
+        </section>
+
+        {/* Authentication Status */}
+        <section className="border-t border-border bg-muted/30 px-4 py-16 sm:px-6">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mx-auto">
+              <User className="h-8 w-8 text-primary" />
+            </div>
+            <h2 className="text-2xl font-bold text-foreground">Your Authentication Status</h2>
+            <div className="mt-8">
+              {session ? (
+                <Card className="max-w-md mx-auto border-primary/20 bg-primary/5">
+                  <CardContent className="pt-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <CheckCircle className="h-8 w-8 text-green-600" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-green-800">Authenticated</h3>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        Welcome back, {session.user?.name || session.user?.email}!
+                      </p>
+
+                    </div>
+                  </CardContent>
+                </Card>
+              ) : (
+                <Card className="max-w-md mx-auto border-muted">
+                  <CardContent className="pt-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <User className="h-8 w-8 text-blue-600" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-blue-800">Not Authenticated</h3>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        Sign in to explore our healthcare data platform
+                      </p>
+                      <div className="mt-4 space-y-2">
+                        <p className="text-xs text-muted-foreground">Supported providers:</p>
+                        <div className="flex justify-center space-x-4">
+                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded text-xs">Google</span>
+                          <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded text-xs">Microsoft</span>
+                          <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded text-xs">GitHub</span>
+
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+            </div>
           </div>
         </section>
 
