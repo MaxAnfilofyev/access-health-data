@@ -10,7 +10,7 @@ export function Header() {
   const { data: session, status } = useSession()
 
   const handleSignIn = () => {
-    signIn() // This will show all configured providers
+    window.location.href = '/signin';
   }
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

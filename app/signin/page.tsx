@@ -9,7 +9,7 @@ export default function SignInPage() {
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-md p-8 border border-border rounded-2xl bg-card shadow-sm">
         <h1 className="text-3xl font-bold tracking-tight text-foreground mb-4">Sign in to Access Health Data</h1>
-        <p className="text-muted-foreground mb-6">
+        <p className="text-foreground mb-6" aria-label="signin-description">
           Sign in with Google or GitHub to access your dashboard.
         </p>
 
