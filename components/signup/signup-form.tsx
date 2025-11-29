@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Github } from "lucide-react"
 import { signIn } from "next-auth/react"
+// Note: Firebase auth is not used in this plan; NextAuth handles Google/GitHub OAuth.
 
 export function SignupForm() {
   const [agreed, setAgreed] = useState(false)
