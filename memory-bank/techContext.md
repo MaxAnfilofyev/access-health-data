@@ -20,6 +20,11 @@ Deployment:       Cloudflare Pages (with wildcard subdomain support)
 - `lucide-react`: 454 React icons
 - `sonner`: Toast notifications
 
+**Authentication:**
+- `next-auth`: 5.0.0-beta.27 (Auth.js v5, Edge Runtime compatible)
+- Google, GitHub, and Microsoft OAuth providers
+- Email authentication support
+
 **Data & Persistence:**
 - `@upstash/redis`: Serverless Redis for tenant data storage
 - No traditional SQL database - Redis-only architecture

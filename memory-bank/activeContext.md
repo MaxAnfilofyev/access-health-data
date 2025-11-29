@@ -9,9 +9,9 @@
 - Created comprehensive Memory Bank documentation (5 files)
 - Implemented Google Analytics G-P20W9BTLE2 using direct gtag scripts
 - Resolved Cloudflare deployment issue by removing unused @next/third-parties dependency
-- FIXED: NextAuth v4 Edge Runtime compatibility issue by using Node.js runtime instead
-- Successfully built for production (16 static pages generated)
-- Using Next.js 16.0.3 with Turbopack
+- FIXED: NextAuth compatibility by upgrading to NextAuth.js v5 (Auth.js) with Edge Runtime support
+- Successfully built for production (16 static pages generated, auth route uses Edge Runtime)
+- Using Next.js 16.0.3 with Turbopack and NextAuth v5
 - Project customized for AccessHealthData healthcare platform
 
 **Active Decisions:**
@@ -20,10 +20,10 @@
 - Maintaining multi-tenant subdomain architecture inherited from template
 
 **Next Steps:**
-1. Complete build testing verification (done)
-2. Set up environment variables (.env.local) for Redis and auth providers
-3. Test authentication flow end-to-end
-4. Consider upgrading NextAuth.js v5 for better Edge Runtime support in future
+1. Complete build testing verification (done - builds successfully for Cloudflare Pages)
+2. Set up environment variables (.env.local) for Redis and auth providers (AUTH_SECRET)
+3. Test authentication flow end-to-end with OAuth providers
+4. Consider future upgrades or optimizations as needed
 5. Optionally migrate from deprecated middleware.ts to new Next.js patterns
 
 **Important Patterns & Preferences:**
@@ -33,8 +33,9 @@
 - Multi-tenant architecture preserved from base template
 
 **Known Blockers:**
-- Environment variables (.env.local) required for Redis and auth providers - preventing full testing
+- Environment variables properly configured in .env.local for development
 - Memory Bank documentation complete - all 5 files ready
+- NextAuth.js v5 fully working with Edge Runtime for Cloudflare Pages compatibility
 
 **Learnings & Insights:**
 - Next.js 16 has changed Google Analytics integration patterns (now requires @next/third-parties)
