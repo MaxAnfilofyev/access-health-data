@@ -8,7 +8,12 @@ const tiers = [
     price: "$0",
     period: "/month",
     description: "Synthetic/mock data only",
-    features: ["Unlimited calls", "1 GB processing + 1 GB storage (mock)", "API keys instantly", "No BAA"],
+    features: [
+      "Unlimited calls",
+      "1 GB processing + 1 GB storage (mock)",
+      "API keys instantly",
+      "No BAA"
+    ],
     cta: "Create Free Account",
     highlighted: false,
   },
@@ -16,8 +21,11 @@ const tiers = [
     name: "Starter",
     price: "$49",
     period: "/month",
-    description: "Includes 5 GB processing + 5 GB storage",
-    features: ["Overage: $2.00/GB processing, $0.50/GB storage", "HIPAA-ready", "BAA included"],
+    description: "Includes 1 GB processing + 1 GB storage",
+    features: [
+      "Overage: $50.00/GB processing + $12.50/GB storage",
+      "BAA included"
+    ],
     cta: "Start with Starter",
     highlighted: false,
   },
@@ -25,30 +33,42 @@ const tiers = [
     name: "Growth",
     price: "$199",
     period: "/month",
-    description: "Includes 25 GB processing + 25 GB storage",
-    features: ["Overage: $1.00/GB processing, $0.25/GB storage", "Priority support", "BAA included"],
+    description: "Includes 5 GB processing + 5 GB storage",
+    features: [
+      "Overage: $25.00/GB processing + $6.25/GB storage",
+      "BAA included"
+    ],
     cta: "Choose Growth",
     highlighted: true,
   },
   {
     name: "Scale",
-    price: "$499",
+    price: "$899",
     period: "/month",
-    description: "Includes 100 GB processing + 100 GB storage",
-    features: ["Overage: $0.40/GB processing, $0.10/GB storage", "Dedicated Slack channel", "BAA included"],
-    cta: "Choose Scale",
+    description: "Includes 20 GB processing + 20 GB storage",
+    features: [
+      "Overage: $10.00/GB processing + $2.50/GB storage",
+      "Priority Support",
+      "BAA included"
+    ],
+    cta: "Choose Pro",
     highlighted: false,
   },
   {
     name: "Enterprise",
-    price: "$2,500",
-    period: "/month base",
-    description: "Custom included volumes",
-    features: ["Overage: $0.10/GB processing, $0.05/GB storage", "Private clusters + dedicated infra", "BAA included"],
+    price: "$3,999",
+    period: "/month",
+    description: "Includes 200 GB processing + 200 GB storage",
+    features: [
+      "Overage: $1.00/GB processing, $0.25/GB storage",
+      "Dedicated Slack + quarterly reviews",
+      "BAA included"
+    ],
     cta: "Get Access",
     highlighted: false,
   },
-]
+];
+
 
 export function PricingTiers() {
   return (

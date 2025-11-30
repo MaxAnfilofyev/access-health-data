@@ -47,11 +47,9 @@ export default function DocsPage() {
                   Get Your API Key
                 </Button>
               </Link>
-              <Link href="/docs/quickstart">
-                <Button size="lg" variant="outline">
-                  View Quickstart
-                </Button>
-              </Link>
+              <Button size="lg" variant="outline">
+                View Quickstart
+              </Button>
             </div>
           </div>
         </section>
